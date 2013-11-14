@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project mdmr with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="D:/asmbl/github/pinternals_mdmr_run/mdmr.jar">
+            <manifest>
+                <attribute name="Main-Class" value="com.pinternals.mdmr.Main"/>
+                <attribute name="Class-Path" value=". lib/commons-cli-1.2.jar lib/mdm-core.jar lib/mdm-protocol.jar lib/mdm-common.jar lib/mdm-admin.jar lib/mdm-data.jar lib/mdm-extension.jar"/>
+            </manifest>
+            <fileset dir="D:/asmbl/github/pinternals_mdmr" includes="com/"/>
+        </jar>
+        <!--delete dir="D:/asmbl/github/pinternals_mdmr_run/lib"/-->
+        <mkdir dir="D:/asmbl/github/pinternals_mdmr_run/lib"/>
+        <copy file="D:/asmbl/github/pinternals_mdmr/lib/commons-cli-1.2.jar" todir="D:/asmbl/github/pinternals_mdmr_run/lib"/>
+        <copy file="D:/asmbl/github/pinternals_mdmr/lib/mdm-core.jar" todir="D:/asmbl/github/pinternals_mdmr_run/lib"/>
+        <copy file="D:/asmbl/github/pinternals_mdmr/lib/mdm-protocol.jar" todir="D:/asmbl/github/pinternals_mdmr_run/lib"/>
+        <copy file="D:/asmbl/github/pinternals_mdmr/lib/mdm-common.jar" todir="D:/asmbl/github/pinternals_mdmr_run/lib"/>
+        <copy file="D:/asmbl/github/pinternals_mdmr/lib/mdm-admin.jar" todir="D:/asmbl/github/pinternals_mdmr_run/lib"/>
+        <copy file="D:/asmbl/github/pinternals_mdmr/lib/mdm-data.jar" todir="D:/asmbl/github/pinternals_mdmr_run/lib"/>
+        <copy file="D:/asmbl/github/pinternals_mdmr/lib/mdm-extension.jar" todir="D:/asmbl/github/pinternals_mdmr_run/lib"/>
+    </target>
+</project>
